@@ -12,6 +12,10 @@ export class LandingPage implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+      var vid = document.getElementById("video");
+      vid.autoplay = true;
+      vid.load();
     
   }
 
