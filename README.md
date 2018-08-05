@@ -1,10 +1,10 @@
-# Thenet App
+# THENET App
 
 ## About the app
 
 ![THE NET app](https://cdn-images-1.medium.com/max/1600/1*ZgAPPRxY5K5O2iZY8GtOiQ.png)
 
-We choose to implement one single accompanying application for our []Ionic 4 book](https://leanpub.com/ionic4). We prefer to show just one application because we want to develop it from zero to production — in the end, we will expose live our app on the Web as PWA, we will publish it in the mobile stores (Play Store and App Store), and will we package it for the desktop.
+We choose to implement one single accompanying application for our [Ionic 4 book](https://leanpub.com/ionic4). We prefer to show just one application because we want to develop it from zero to production — in the end, we will expose live our app on the Web as PWA, we will publish it in the mobile stores (Play Store and App Store), and will we package it for the desktop.
 
 Demo: [https://thenet-app.firebaseapp.com](https://thenet-app.firebaseapp.com)
 
