@@ -1,6 +1,6 @@
 {
-  "name": "The Net - Social Network",
-  "short_name": "The Net",
+  "name": "The Net",
+  "short_name": "TheNet",
   "theme_color": "#ffc10d",
   "background_color": "#56ace0",
   "display": "standalone",
