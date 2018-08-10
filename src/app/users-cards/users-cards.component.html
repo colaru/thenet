@@ -1,0 +1,66 @@
+<ion-grid class="ion-cards-container">
+  <ion-row *ngFor="let row of cardsMatrix">
+
+    <ion-col
+            *ngFor="let card of row"
+            class="ion-card"
+            [ngStyle]="{
+            'background-size': 'cover',
+            'background-image': 'url(' + card.avatarUrl + ')'
+            }"
+
+            [attr.width-25]="getWidthClass() === 'width-25' ? true : null"
+            [attr.width-33]="getWidthClass() === 'width-33' ? true : null"
+            [attr.width-50]="getWidthClass() === 'width-50' ? true : null"
+            (click)="onClick(card)"
+    >
+      <div class="overlay" *ngIf="hasOverlay(card)"></div>
+      <div class="content-wrapper">
+        <h4>{{card.title}}</h4>
+        <div>
+          <a style="margin-left: 10px;"> {{card.views}} <ion-icon name="eye"></ion-icon></a>
+          <a style="margin-left: 10px;"> {{card.streams}} <ion-icon name="videocam"></ion-icon></a>
+          <a style="margin-left: 10px;"> {{card.likes}} <ion-icon name="flag"></ion-icon></a>
+        </div>
+      </div>
+      <div>
+        <div class="content-badge">
+          <ion-badge *ngIf="card.online == 'online'" color="secondary" item-end>{{card.online}}</ion-badge>
+          <ion-badge *ngIf="card.online == 'offline'" color="primary" item-end>{{card.online}}</ion-badge>
+          <ion-badge *ngIf="card.online == 'away'" color="twitter" item-end>{{card.online}}</ion-badge>
+        </div>
+        <div class="provider-badge">
+          <a target="_blank" href="https://www.facebook.com/{{card.uid}}">
+            <ion-badge *ngIf="card.provider == 'facebook.com'" color="facebook" item-end>
+              <ion-icon name="logo-facebook"></ion-icon>
+            </ion-badge>
+          </a>
+          <a target="_blank" href="https://plus.google.com/{{card.uid}}">
+            <ion-badge *ngIf="card.provider == 'google.com'" color="google" item-end>
+              <ion-icon name="logo-google"></ion-icon>
+            </ion-badge>
+          </a>
+          <a target="_blank" href="https://twitter.com/intent/user?user_id={{card.uid}}">
+            <ion-badge *ngIf="card.provider == 'twitter.com'" color="twitter" item-end>
+              <ion-icon name="logo-twitter"></ion-icon>
+            </ion-badge>
+          </a>
+        </div>
+
+        <div class="gender-badge">
+          <ion-badge *ngIf="card.gender == 'male'" color="facebook" item-end>
+            <ion-icon name="male"></ion-icon>
+          </ion-badge>
+          <ion-badge *ngIf="card.gender == 'female'" color="google" item-end>
+            <ion-icon name="female"></ion-icon>
+          </ion-badge>
+        </div>
+
+        <div *ngIf="card.country" class="locale-badge">
+          <img *ngIf="card.country && card.country.length == 2" src='/assets/img/flags_iso/24/{{card.country}}.png'/>
+        </div>
+      </div>
+    </ion-col>
+
+  </ion-row>
+</ion-grid>
