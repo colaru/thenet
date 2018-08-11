@@ -57,10 +57,6 @@ export class UsersCardsComponent implements OnInit {
 
     }
 
-    hasOverlay(card: any): boolean {
-        return card.hasOverlay !== false;
-    }
-
     getCardsPerRow(): number {
         return this.cardsPerRow;
     }
