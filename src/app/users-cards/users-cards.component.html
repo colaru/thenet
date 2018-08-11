@@ -14,6 +14,7 @@
             [attr.width-50]="getWidthClass() === 'width-50' ? true : null"
             (click)="onClick(card)"
     >
+
       <div class="overlay" *ngIf="hasOverlay(card)"></div>
       <div class="content-wrapper">
         <h4>{{card.title}}</h4>
@@ -60,6 +61,7 @@
           <img *ngIf="card.country && card.country.length == 2" src='/assets/img/flags_iso/24/{{card.country}}.png'/>
         </div>
       </div>
+
     </ion-col>
 
   </ion-row>
