@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UsersCardsComponent } from './users-cards.component';
+import {CUSTOM_ELEMENTS_SCHEMA} from "@angular/core";
 
 describe('UsersCardsComponent', () => {
   let component: UsersCardsComponent;
@@ -8,7 +9,7 @@ describe('UsersCardsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ UsersCardsComponent ]
+      declarations: [ UsersCardsComponent ], schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents();
   }));
@@ -22,4 +23,6 @@ describe('UsersCardsComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+
 });

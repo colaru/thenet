@@ -62,6 +62,7 @@ export class LandingPage implements OnInit {
 
     private configureVideoPlayer() {
         let vid: HTMLVideoElement = <HTMLVideoElement> document.getElementById("video");
+        vid.load();
         vid.autoplay = true;
         vid.load();
     }
@@ -78,6 +79,6 @@ export class LandingPage implements OnInit {
             },
         }
         slides.pager = true;
-        slides.startAutoplay()
+        // slides.startAutoplay()
     }
 }
