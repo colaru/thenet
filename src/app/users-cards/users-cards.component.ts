@@ -81,9 +81,9 @@ export class UsersCardsComponent implements OnInit {
         let cardsPerRow = this.getCardsPerRow();
         if (cardsPerRow === 2) {
             return 'width-50';
-        } else if (cardsPerRow === 3) {
-            return 'width-33';
         } else if (cardsPerRow === 4) {
+            return 'width-33';
+        } else if (cardsPerRow === 6) {
             return 'width-25';
         }
         return null;

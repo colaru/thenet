@@ -125,4 +125,15 @@ describe('UsersCardsComponent', () => {
         const cardsElement: HTMLElement = fixture.nativeElement;
         expect(cardsElement.textContent).toContain('Mihali Rouanda');
     });
+
+    it('should work without cardsPerRow param;', async () => {
+        const element: HTMLElement = fixture.nativeElement;
+        let width = window.innerWidth
+        console.log("Window width: " + width)
+
+        const list = element.querySelector('ion-row');
+        expect(list.children.length).toEqual(5);
+    });
+
+
 });
