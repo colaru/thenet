@@ -2,4 +2,21 @@
 
     <app-users-cards cardsPerRow="2" [cards]="cards"></app-users-cards>
 
+    <!-- fab placed in the center of the content with a list on each side -->
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button color="danger">
+            <ion-icon name="exit"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-list side="top">
+            <ion-fab-button (click)="logout()"><ion-icon name="home"></ion-icon></ion-fab-button>
+        </ion-fab-list>
+        <ion-fab-list side="start">
+            <ion-fab-button (click)="gotoProfilePage()"><ion-icon name="contact"></ion-icon></ion-fab-button>
+        </ion-fab-list>
+    </ion-fab>
+
+    <!--<div id="sign-in-status"></div>-->
+    <!--<div id="sign-in"></div>-->
+    <!--<div id="account-details"></div>-->
+    
 </ion-content>
