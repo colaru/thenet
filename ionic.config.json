@@ -1,5 +1,7 @@
 {
   "name": "thenet",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
